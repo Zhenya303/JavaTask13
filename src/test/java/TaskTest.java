@@ -40,11 +40,10 @@ public class TaskTest {
 
         boolean expected = true;
         ;
-
-        Assertions.assertEquals(expected, meeting.matches("Утро"));
         Assertions.assertEquals(expected, meeting.matches("Тренировка"));
         Assertions.assertEquals(expected, meeting.matches("Гимнастика"));
         Assertions.assertNotEquals(expected, meeting.matches("тренировка"));
+        Assertions.assertNotEquals(expected, meeting.matches("Утро"));
     }
 
 
